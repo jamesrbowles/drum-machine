@@ -1,20 +1,18 @@
 import React from "react";
 import DrumPadItems from "./DrumPadItems";
 
-const drumLetters = ["Q", "W", "E", "A", "S", "D", "Z", "X", "C"];
+import { drumAudio } from "../audio";
 
-const DrumPad = ({ audioFile, setAudioFile, findAudio, playAudio }) => {
+const DrumPad = ({ playAudio }) => {
   return (
     <div className="drumpad-section">
-      {drumLetters.map((item, index) => {
+      {drumAudio.map((drumpad) => {
         return (
           <DrumPadItems
-            key={item}
-            item={item}
-            audioFile={audioFile}
-            setAudioFile={setAudioFile}
-            findAudio={findAudio}
-            onClick={playAudio}
+            key={drumpad.src}
+            item={drumpad.text}
+            src={drumpad.src}
+            playAudio={playAudio}
           />
         );
       })}

@@ -1,18 +1,9 @@
 import React from "react";
 
-const DrumPadItems = ({ item, audioFile, setAudioFile, findAudio }) => {
+const DrumPadItems = ({ item, src, playAudio }) => {
   return (
-    <div
-      className="drum-pad"
-      id={item}
-      /* onClick={() => findAudio(item)} */
-    >
-      <audio
-        id="audio"
-        className="clip"
-        src={audioFile}
-        type="audio/mp3"
-      ></audio>
+    <div className="drum-pad" id={src} onClick={() => playAudio(item)}>
+      <audio id={item} className="clip" src={src}></audio>
       <span>{item}</span>
     </div>
   );
