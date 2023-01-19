@@ -37,3 +37,10 @@ body {
 .drum-pad:hover {
   background-color: rgba(168, 168, 168, 0.9);
 }
+
+#display {
+  text-align: center;
+  font-size: 3rem;
+  margin: 1.5rem;
+  color: white;
+}
